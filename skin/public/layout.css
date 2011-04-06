@@ -1,0 +1,85 @@
+/*
+* soft blue background color: F4F4F4
+* border soft color: D3D3D3
+* hard blue background color: 004276
+* default off-white background: F7F6F5
+*/
+
+body {
+    font-family: georgia, "times new roman", serif;
+    font-size: 70%;
+    background-color: #FFFFFF;
+}
+
+#container {
+    margin: 10px auto;
+    width: 80%;
+    background-color: #F7F6F5;
+}
+
+#header {
+	padding: 10px;
+	background-color: #1a82f7;	
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(100% 100% 90deg, #004276, #F4F4F4);
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F4F4F4), to(#004276));
+	/* Safari 5.1+, Chrome 10+ */
+	background: -webkit-linear-gradient(#F4F4F4, #004276);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(#F4F4F4, #004276);
+	/*border-radius: 20px;*/
+	text-shadow: 12px 12px 5px #D3D3D3;
+}
+
+#header a {
+	color: #ffffff;	
+	text-decoration: none;
+}
+
+#main {
+	margin-top: 2px;
+	padding: 10px;
+    float: left;
+    width: 60%;
+    -moz-border-top-right-radius: 15px;-webkit-border-top-right-radius: 15px;border-top-right-radius: 15px;
+    -moz-border-bottom-left-radius: 15px;-webkit-border-bottom-left-radius: 15px;border-bottom-left-radius: 15px;
+    border: 1px solid #D3D3D3;
+}
+
+#sidebar {
+	margin-top: 2px;	
+	padding: 10px;
+    float: right;
+    width: 35%;
+    border: 1px solid #004276;
+    background-color: #F4F4F4;
+    -moz-border-top-left-radius: 15px;-webkit-border-top-left-radius: 15px;border-top-left-radius: 15px;
+    -moz-border-bottom-right-radius: 15px;-webkit-border-bottom-right-radius: 15px;border-bottom-right-radius: 15px;
+}
+
+#footer {
+    clear: both;
+    margin: 10px auto;
+    width: 80%;
+}
+
+
+a {
+	text-decoration: none;
+	color: #004276
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h2.tagline {
+	
+}
