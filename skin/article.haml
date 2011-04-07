@@ -1,6 +1,6 @@
-#main.clearfix
+#main
   :if article.version
-    %a.sha-version{ href: "/#{article.version}/#{article.name}" } Static Version
+    %a.sha-version{ href: "/#{article.version}/#{article.name}" } Version statique
   %h1
     %a{href: "/" + article.name}&= article.title
   = markdownEncode(article.markdown)
@@ -10,9 +10,9 @@
     var disqus_url = "http://howtonode.org/#{article.name}";
   %script(src="http://disqus.com/forums/howtonodeorg/embed.js" type="text/javascript")
   %a(href="http://disqus.com/forums/howtonodeorg/?url=ref")
-    View the discussion thread.
+    Voir les &eacute;changes.
   %a.dsq-brlink(href="http://disqus.com")
-    blog comments powered by
+    commentaires g&eacute;r&eacute;s par
     %span.logo-disqus
       Disqus
   :script
@@ -29,12 +29,12 @@
 
 
 #sidebar
-  .aside.clearfix
-    %h4 About the Author
-    %img.headshot{src: gravitar(author.email) }
+  .auteur
+    %h4 ="&Aacute; propos de " + author.name
+    %img{src: "/" + author.avatar, title: author.name }
     %dl
-      %dt Name:
-      %dd&= author.name
+      %dt Nom:
+      %dd&= author.realname
     :if author.github
       %dl
         %dt Github:
@@ -49,34 +49,34 @@
         %dd= twitter(author.twitter)
     :if author.location
       %dl
-        %dt Location:
+        %dt Emplacement:
         %dd&= author.location
     :if author.homepage
       %dl
-        %dt Links:
+        %dt Site Web:
         %dd
-          %a{href: author.homepage} Homepage
+          %a{href: author.homepage} =author.homepage
 
-  .aside
+  .props
     %h4
-      About this Article
+      Propri&eacute;t&eacute;s
     :if article.date
       %dl{title: article.date}
         %dt
-          Date Released:
+          Date de publication:
         %dd
           &= formatDate(article.date, "%l %F %j, %Y")
     :if article.lastUpdated
       %dl{title: article.lastUpdated}
         %dt
-          Last Updated:
+          Dernière mise à jour:
         %dd
           &= formatDate(article.lastUpdated, "%l %F %j, %Y")
 
     :if article.node
       %dl
         %dt
-          Node Version:
+          Version de Node.js:
         %dd
           %a{ href: "http://github.com/joyent/node/tree/" + article.node }
             node #{article.node}
@@ -84,7 +84,7 @@
     :if article.dependencies
       %dl
         %dt
-          Dependency Versions:
+          Versions des d&eacute;pendances:
         %dd
           %ul
             :each dependency in article.dependencies
@@ -95,7 +95,7 @@
     :if article.uniqueSnippets
       %dl
         %dt
-          Code Samples:
+          Exemples de code:
         %dd
           %ul
             :each base, snippet in article.uniqueSnippets
@@ -105,7 +105,7 @@
 
     %dl
       %dt
-        Revisions:
+        R&eacute;visions:
       %dd
         %ul
           :each version, stat in article.log
@@ -116,13 +116,11 @@
   :if article.related && article.related.length > 0
     .bubble
       %h4
-        Other Articles by this Author
+        Autres articles:
       %ul
         :each related in article.related
           %li
             %a{href: "/" + related.name}&=related.title
             :if related.node
               %span.versiontag&= related.node
-
-  .bubble= markdownEncode(description)
 

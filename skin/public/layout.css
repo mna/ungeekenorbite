@@ -39,7 +39,8 @@ body {
 }
 
 #main {
-	margin-top: 2px;
+	margin-top: 3px;
+	margin-bottom: 3px;
 	padding: 10px;
     float: left;
     width: 70%;
@@ -50,8 +51,8 @@ body {
 
 #sidebar {
   min-width: 200px;
-	margin-top: 2px;	
-	margin-bottom: 10px;
+	margin-top: 3px;	
+	margin-bottom: 3px;
 	padding: 10px;
     float: right;
     width: 25%;
@@ -59,6 +60,17 @@ body {
     background-color: #F4F4F4;
     -moz-border-top-left-radius: 15px;-webkit-border-top-left-radius: 15px;border-top-left-radius: 15px;
     -moz-border-bottom-right-radius: 15px;-webkit-border-bottom-right-radius: 15px;border-bottom-right-radius: 15px;
+}
+
+#sidebar img {
+  width: 200px;
+  height: 200px;
+  -moz-box-shadow: 10px 10px 5px #888;
+  -webkit-box-shadow: 10px 10px 5px #888;
+  box-shadow: 10px 10px 5px #888;
+  border: 1px solid #D3D3D3;
+  margin: 0px auto ;
+  display: block;
 }
 
 #share {
