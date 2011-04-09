@@ -3,8 +3,8 @@
   %head
     %meta(charset="UTF-8")
     %meta(name="viewport" content="width=device-width")
-    %meta(name="description" content="(title ? title + " - " : "Un geek en orbite")}")
-    %title #{(title ? title + " - " : "")}Un geek en orbite
+    %meta{name:"description", content:(title ? title : "Un geek en orbite")}
+    %title #{(title ? title + " - " : "") + "Un geek en orbite"}
     %link(rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed.xml")
     %link(href="/favicon.ico" rel="icon" type="image/x-icon")
     %link(rel="stylesheet" href="/layout.css" media="all, only screen and (min-width: 601px)")
