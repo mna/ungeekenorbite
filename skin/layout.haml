@@ -7,27 +7,34 @@
     %title #{(title ? title + " - " : "")}Un geek en orbite
     %link(rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed.xml")
     %link(href="/favicon.ico" rel="icon" type="image/x-icon")
-    %link(rel="stylesheet" href="/layout.css" media="only screen and (min-width: 601px)")
+    %link(rel="stylesheet" href="/layout.css" media="all, only screen and (min-width: 601px)")
     %link(rel="stylesheet" href="/mobile.css" media="only screen and (max-width: 600px), handheld")
+    %script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js")
     %script(src="jquery.mediaqueries.js")
+    %script(src="jquery.tpl_layout1.1.6.min.js")
+    %script
+      $.templateLayoutShowOnReady();
+ 
+      $(function() {
+        $.setTemplateLayout('layout.css');
+        });
   %body
-    #container
-      #header
-        %a{href: "/"}
-          %h1
-            Un geek en orbite
-          %h2.tagline
-            blogue_exploratoire | laboratoire_journalis&eacute;;
-      = content
-      
-      #footer
-        %p Code source, design, contenu et articles &copy; 2011 Martin Angers sous la license MIT. Tous les exemples de code utilisés sont du domaine public.
-        %p Wheat s'exécutant sous node #{process.version}
-    :script
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    :script
-      try {
-      var pageTracker = _gat._getTracker("UA-12824411-1");
-      pageTracker._trackPageview();
-      } catch(err) {}
+    #header
+      %a{href: "/"}
+        %h1
+          Un geek en orbite
+        %h2.tagline
+          blogue_exploratoire | laboratoire_journalis&eacute;;
+    = content
+    
+    #footer
+      %p Code source, design, contenu et articles &copy; 2011 Martin Angers sous la license MIT. Tous les exemples de code utilisés sont du domaine public.
+      %p Wheat s'exécutant sous node #{process.version}
+  :script
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  :script
+    try {
+    var pageTracker = _gat._getTracker("UA-12824411-1");
+    pageTracker._trackPageview();
+    } catch(err) {}

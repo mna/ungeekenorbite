@@ -2,14 +2,14 @@
   :each article in articles.slice(0,15)
     .article
       .author
-        %img{src:gravitar(article.author.email, 30)}
-        By #{article.author.name}
-        .date{title: article.date}&= formatDate(article.date, "%Y.%m.%d")
+        %img{src:article.author.avatar, title:article.author.name}
+        #{article.author.name + " "}
+        %span.date{title: article.date}&= formatDate(article.date, "%Y.%m.%d")
       %h3{style: "margin-right: 150px"}
         %a{href: "/" + article.name}&= article.title
       %p
         = intro(article.markdown)
-      %a{href: "/" + article.name} Read more...
+      %a{href: "/" + article.name} Lire la suite...
 
 #sidebar
   #share
@@ -27,11 +27,8 @@
     %h4
       Articles
     %ul
-      :each article in articles.slice(0,20)
+      :each article in articles.slice(0,10)
         %li
           %a{href: "/" + article.name}&=article.title
-          &=" by " + article.author.name
-          :if article.node
-            %span.versiontag&= article.node
-  .bubble= markdownEncode(description)
+          &=" by " + article.author.name + " " + formatDate(article.date, "%Y.%m.%d")
 
