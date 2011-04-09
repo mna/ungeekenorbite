@@ -2,12 +2,14 @@
 %html(lang="fr")
   %head
     %meta(charset="UTF-8")
+    %meta(name="viewport" content="width=device-width")
+    %meta(name="description" content="(title ? title + " - " : "Un geek en orbite")}")
     %title #{(title ? title + " - " : "")}Un geek en orbite
-    %meta(name="description" content="#{(title ? title + " - " : "Un geek en orbite")}")
-    %link(href="/layout.css?v1" rel="stylesheet")
-    %link(href="/print.css" rel="stylesheet" media="print")
     %link(rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed.xml")
     %link(href="/favicon.ico" rel="icon" type="image/x-icon")
+    %link(rel="stylesheet" href="/layout.css" media="only screen and (min-width: 601px)")
+    %link(rel="stylesheet" href="/mobile.css" media="only screen and (max-width: 600px), handheld")
+    %script(src="jquery.mediaqueries.js")
   %body
     #container
       #header

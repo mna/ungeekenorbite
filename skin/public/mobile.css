@@ -1,0 +1,45 @@
+body {
+    font-family: georgia, "times new roman", serif;
+    font-size: 70%;
+    background-color: #FFFFFF;
+}
+
+#container {
+    width: 100%;
+    background-color: #F7F6F5;
+}
+
+#header {
+  display: none;
+}
+
+#main {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	padding: 10px;
+	width: auto;
+  border: 1px solid #D3D3D3;
+}
+
+#sidebar {
+  display: none;
+}
+
+#footer {
+  width: auto;
+  clear: both;
+  padding: 10px;
+  background-color: #004276;
+  text-align: center;
+  color: #FFFFFF;
+	background-color: #004276;	
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(100% 100% 90deg, #F4F4F4, #004276);
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#004276), to(#F4F4F4));
+	/* Safari 5.1+, Chrome 10+ */
+	background: -webkit-linear-gradient(#004276, #F4F4F4);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(#004276, #F4F4F4);
+}
+
