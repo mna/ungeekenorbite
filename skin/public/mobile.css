@@ -2,33 +2,34 @@ body {
     font-family: georgia, "times new roman", serif;
     font-size: 70%;
     background-color: #FFFFFF;
-}
-
-#container {
-    width: 100%;
-    background-color: #F7F6F5;
+    padding: 0;
+    margin: 0;
+    min-width: 0px;
+    display: "a"
+             "b";
 }
 
 #header {
   display: none;
+  visibility: hidden;
 }
 
 #main {
+  position: a;
 	margin-top: 3px;
 	margin-bottom: 3px;
-	padding: 10px;
-	width: auto;
+	padding: 3px;
   border: 1px solid #D3D3D3;
 }
 
 #sidebar {
   display: none;
+  visibility: hidden;
 }
 
 #footer {
-  width: auto;
-  clear: both;
-  padding: 10px;
+  position: b;
+  padding: 3px;
   background-color: #004276;
   text-align: center;
   color: #FFFFFF;

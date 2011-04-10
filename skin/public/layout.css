@@ -13,7 +13,7 @@ body {
              ". b b b c ." / *
              ". d d d d ." / 10em
              10em * * * * 10em;
-    min-width: 700px;
+    min-width: 800px;
 }
 /*
 #container {
@@ -83,19 +83,19 @@ img {
 }
 
 #share {
-  display: ". e f ." / 65px;
+  display: "a b c";
 }
 
 #twitter {
-    position: e;
+    position: a;
 }
 
 #facebook {
-    position: f;
+    position: b;
 }
 
 #linkedin {
-  display: hidden;
+  position: c;
 }
 
 #footer {
